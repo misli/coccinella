@@ -1,0 +1,34 @@
+{% load cms_tags sekizai_tags %}
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+    <head>
+        <title>{% block title %}{% endblock %} | Coccinella</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="Content-Language" content="cs" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="keywords" content="" lang="cs" />
+        <meta name="description" content="" lang="cs" />
+        <meta name="author" content="Jakub Dorňák, Misli.cz" />
+        <meta name="rating" content="general" />
+        <meta name="robots" content="index" />
+        <!--link type="image/ico" href="favicon.ico" /-->
+        <link type="text/css"  href="{{ STATIC_URL }}layout/style.css?{{ hash }}" rel="stylesheet" />
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %}
+        <div id="header">
+            {% block header %}{% endblock %}
+        </div>
+        <div id="body">
+            {% block body %}{% endblock %}
+        </div>
+        <div id="footer">
+            {% block footer %}{% endblock %}
+        </div>
+        {% render_block "js" %}
+    </body>
+</html>
