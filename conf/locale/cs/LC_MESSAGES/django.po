@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-05 10:04+0100\n"
+"POT-Creation-Date: 2013-10-24 15:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,56 +17,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: templates/404.html:6
+#: app/settings.py:211
+msgid "Czech"
+msgstr "Čeština"
+
+#: app/settings.py:235
+msgid "Default"
+msgstr "Výchozí"
+
+#: app/settings.py:243
+msgid "Content"
+msgstr "Obsah"
+
+#: app/settings.py:297 app/settings.py:298
+msgid "coccinella"
+msgstr "coccinella"
+
+#: templates/404.html:4 templates/404.html.py:8
 msgid "Page not found"
 msgstr "Stránka nenalezena"
 
-#: templates/cmsplugin_news/latest_news.html:8
-#: templates/cmsplugin_news/news_archive.html:14
-#: templates/cmsplugin_news/news_archive_day.html:14
-#: templates/cmsplugin_news/news_archive_month.html:14
-#: templates/cmsplugin_news/news_archive_year.html:14
-msgid "Read more"
-msgstr "Více"
+#: templates/500.html:4 templates/500.html.py:8
+msgid "Unhandled Exception"
+msgstr "Neznámá chyba"
 
-#: templates/cmsplugin_news/latest_news.html:10
-msgid "No news yet"
-msgstr "Žádné zprávy"
-
-#: templates/cmsplugin_news/news_archive.html:5
-msgid "Latest News"
-msgstr "Nejnovější příspěvky"
-
-#: templates/cmsplugin_news/news_archive.html:8
-msgid "Latest news"
-msgstr "Nejnovější příspěvky"
-
-#: templates/cmsplugin_news/news_archive_day.html:5
-#: templates/cmsplugin_news/news_archive_day.html:8
-#, python-format
-msgid "News for %(day)s"
-msgstr "Příspěvky ze dne %(day)s"
-
-#: templates/cmsplugin_news/news_archive_day.html:16
-msgid "No news for this day"
-msgstr "Žádne příspěvky pro tento den"
-
-#: templates/cmsplugin_news/news_archive_month.html:5
-#: templates/cmsplugin_news/news_archive_month.html:8
-#, python-format
-msgid "News for %(month)s"
-msgstr "Příspěvky za měsíc %(month)s"
-
-#: templates/cmsplugin_news/news_archive_month.html:16
-msgid "No news for this month"
-msgstr "Žádne příspěvky pro tento měsíc"
-
-#: templates/cmsplugin_news/news_archive_year.html:5
-#: templates/cmsplugin_news/news_archive_year.html:8
-#, python-format
-msgid "News for %(year)s"
-msgstr "Příspěvky za rok %(year)s"
-
-#: templates/cmsplugin_news/news_archive_year.html:16
-msgid "No news for this year"
-msgstr "Žádné příspěvky pro tento rok"
