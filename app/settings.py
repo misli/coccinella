@@ -117,6 +117,7 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     #'cms.middleware.language.LanguageCookieMiddleware',
+    'misli.middleware.SecureAdminMiddleware',
 )
 
 ROOT_URLCONF = 'urls'
@@ -297,3 +298,4 @@ PHOTOLOGUE_USE_SORTEDM2M = True
 CMSPLUGIN_PHOTOLOGUE_ADD_PHOTO_TEMPLATES = (('coccinella', _('coccinella')),)
 CMSPLUGIN_PHOTOLOGUE_ADD_GALLERY_TEMPLATES = (('coccinella', _('coccinella')),)
 
+SECURE_PROXY_SSL_HEADER = ('SECURE', 'true')

@@ -19,7 +19,7 @@
         {% render_block "css" %}
     </head>
     <body>
-        {% cms_toolbar %}
+        {% if settings.DEBUG or request.is_secure %}{% cms_toolbar %}{% endif %}
         <div id="header">
             {% block header %}{% endblock %}
         </div>
