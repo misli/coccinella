@@ -1,4 +1,6 @@
 * {
+    font-family: serif;
+    font-style: italic;
     margin: 0;
     padding: 0;
 }
@@ -15,7 +17,40 @@ body {
 }
 
 #header {
-    height: 350px;
+    position: relative;
+    height: 400px;
+}
+
+#welcome {
+    padding-top: 300px;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow:
+        white  2px  2px 2px;
+}
+
+#moto {
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    text-align: right;
+    width: 300px;
+    font-size: 18px;
+    font-style: italic;
+    text-shadow:
+        white -2px -2px 6px,
+        white -2px  2px 6px,
+        white  2px -2px 6px,
+        white  2px  2px 6px,
+        white -3px -3px 8px,
+        white -3px  3px 8px,
+        white  3px -3px 8px,
+        white  3px  3px 8px,
+        white -4px -4px 10px,
+        white -4px  4px 10px,
+        white  4px -4px 10px,
+        white  4px  4px 10px;
+    color: red;
 }
 
 #menu {
@@ -71,4 +106,8 @@ p {
 
 ul, ol {
   margin-left: 20px;
+}
+
+code {
+    font-family: serif;
 }
