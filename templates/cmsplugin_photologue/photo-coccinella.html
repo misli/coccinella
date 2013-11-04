@@ -11,5 +11,5 @@
 {% if plugin.display_link %}</a>{% endif %}
 </p>
 <p>Kód pro vložení:</p>
-<code>&lt;img src="http://coccinella.cz{{ photo.plugin_display_url }}" width="{{ photo.plugin_display_size.0 }}" height="{{ photo.plugin_display_size.1 }}" alt="{{ photo.title }}" /&gt;</code>
+<code>&lt;a href="http://coccinella.cz{{ photo.get_absolute_url }}" &gt;&lt;img src="http://coccinella.cz{{ photo.plugin_display_url }}" width="{{ photo.plugin_display_size.0 }}" height="{{ photo.plugin_display_size.1 }}" alt="{{ photo.title }}" /&gt;&lt;/a&gt;</code>
 </div>

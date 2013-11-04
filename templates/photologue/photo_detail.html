@@ -1,0 +1,20 @@
+{% extends "default.html" %}
+{% load sekizai_tags %}
+
+{% addtoblock "css" %}<link href="{{ STATIC_URL }}lightbox/css/lightbox.css" rel="stylesheet" />{% endaddtoblock %}
+{% addtoblock "js" %}<script src="{{ STATIC_URL }}lightbox/js/jquery-1.10.2.min.js"></script>{% endaddtoblock %}
+{% addtoblock "js" %}<script src="{{ STATIC_URL }}lightbox/js/lightbox-2.6.min.js"></script>{% endaddtoblock %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block content %}
+<div class="coccinella-image">
+    <p style="text-align: center;">
+        <a href="{{ photo.get_velke_url }}" data-lightbox="{{ plugin.title_slug }}">
+            <img src="{{ photo.get_zobrazeni_url }}" width="{{ photo.get_zobrazeni_size.0 }}" height="{{ photo.get_zobrazeni_size.1 }}" alt="{{ photo.title }}" />
+        </a>
+    </p>
+    <p>Kód pro vložení:</p>
+    <code>&lt;a href="http://coccinella.cz{{ photo.get_absolute_url }}" &gt;&lt;img src="http://coccinella.cz{{ photo.get_zobrazeni_url }}" width="{{ photo.get_zobrazeni_size.0 }}" height="{{ photo.get_zobrazeni_size.1 }}" alt="{{ photo.title }}" /&gt;&lt;/a&gt;</code>
+</div>
+{% endblock %}

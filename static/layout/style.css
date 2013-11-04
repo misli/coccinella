@@ -80,6 +80,10 @@ body {
     float: right;
 }
 
+.coccinella-image {
+    padding: 20px 0 30px;
+}
+
 .inner {
     padding: 0 100px;
 }
