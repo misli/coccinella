@@ -300,4 +300,6 @@ PHOTOLOGUE_USE_SORTEDM2M = True
 CMSPLUGIN_PHOTOLOGUE_ADD_PHOTO_TEMPLATES = (('coccinella', _('coccinella')),)
 CMSPLUGIN_PHOTOLOGUE_ADD_GALLERY_TEMPLATES = (('coccinella', _('coccinella')),)
 
+# security settings
 SECURE_PROXY_SSL_HEADER = ('SECURE', 'true')
+SESSION_COOKIE_SECURE = not DEBUG
