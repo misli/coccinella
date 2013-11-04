@@ -18,6 +18,6 @@
         {% show_menu 0 1 0 0 "menu.html" %}
     </div>
     <div id="content">
-        {% placeholder content %}
+        {% block content %}{% placeholder content %}{% endblock %}
     </div>
 {% endblock %}
