@@ -11,20 +11,20 @@ DEBUG = 'DEBUG' in os.environ and os.environ['DEBUG'] and True or False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Jakub Dorňák', 'admin@misli.cz'),
+    ('Jakub Dorňák', 'jakub.dornak@misli.cz'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'coccinella',
-        'USER': 'coccinella',                  # Not used with sqlite3.
-        'PASSWORD': 'fb6c3ef18149a6739ffc3b3535b40194', # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'coccinella',                 # Or path to database file if using sqlite3.
+        # The following settings are not used with sqlite3:
+        'USER': 'coccinella',
+        'PASSWORD': 'fb6c3ef18149a6739ffc3b3535b40194',
+        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '',                      # Set to empty string for default.
     }
 }
 
@@ -42,11 +42,11 @@ TIME_ZONE = 'Europe/Prague'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'cs'
 
-SITE_ID = 1
-
 LOCALE_PATHS = (
     join(PROJECT_PATH, 'conf', 'locale'),
 )
+
+SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -60,22 +60,22 @@ USE_L10N = True
 USE_TZ = False
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/home/media/media.lawrence.com/media/"
+# Example: "/var/www/example.com/media/"
 MEDIA_ROOT = join(PROJECT_PATH, 'htdocs', 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
-# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+# Examples: "http://example.com/media/", "http://media.example.com/"
 MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/home/media/media.lawrence.com/static/"
+# Example: "/var/www/example.com/static/"
 STATIC_ROOT = join(PROJECT_PATH, 'htdocs', 'static')
 
 # URL prefix for static files.
-# Example: "http://media.lawrence.com/static/"
+# Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
 
 # Additional locations of static files
@@ -170,6 +170,8 @@ INSTALLED_APPS = (
     'sortedm2m',
 )
 
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
@@ -199,7 +201,7 @@ LOGGING = {
     }
 }
 
-APPEND_SLASH = False
+APPEND_SLASH = True
 
 LANGUAGES = (
     ('cs', 'Čeština'),
