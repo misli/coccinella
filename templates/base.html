@@ -20,7 +20,7 @@
         {% block extrahead %}{% endblock %}
     </head>
     <body>
-        {% if settings.DEBUG or request.is_secure %}{% cms_toolbar %}{% endif %}
+        {% cms_toolbar %}
         <div id="header">
             {% block header %}{% endblock %}
         </div>
