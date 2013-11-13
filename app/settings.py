@@ -297,8 +297,8 @@ JQUERY_UI_CSS = 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smo
 # Use SortedManyToManyField
 PHOTOLOGUE_USE_SORTEDM2M = True
 
-CMSPLUGIN_PHOTOLOGUE_ADD_PHOTO_TEMPLATES = (('coccinella', _('coccinella')),)
-CMSPLUGIN_PHOTOLOGUE_ADD_GALLERY_TEMPLATES = (('coccinella', _('coccinella')),)
+CMSPLUGIN_PHOTOLOGUE_PHOTO_TEMPLATES = (('coccinella', _('coccinella')),)
+CMSPLUGIN_PHOTOLOGUE_GALLERY_TEMPLATES = (('coccinella', _('coccinella')),)
 
 # security settings
 SECURE_PROXY_SSL_HEADER = ('SECURE', 'true')
