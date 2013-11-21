@@ -1,10 +1,10 @@
 # Django settings for coccinella project.
 # encoding: utf-8
 
-from os.path import dirname, join, realpath
 import os
-gettext = lambda s: s
-_ = gettext
+from os.path import dirname, join, realpath
+from django.utils.translation import ugettext_lazy as _
+
 PROJECT_PATH = dirname(dirname(realpath(__file__)))
 
 DEBUG = 'DEBUG' in os.environ and os.environ['DEBUG'] and True or False
@@ -129,7 +129,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_PATH, 'templates'),
+    join(PROJECT_PATH, 'templates'),
 )
 
 INSTALLED_APPS = (
@@ -211,7 +211,7 @@ CMS_LANGUAGES = {
     1: [
         {
             'code': 'cs',
-            'name': gettext('Czech'),
+            'name': _('Czech'),
         },
     ],
     'default': {
@@ -235,7 +235,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 CMS_TEMPLATES = (
-    ('default.html', gettext('Default')),
+    ('default.html', _('Default')),
 )
 
 CMS_PLACEHOLDER_CONF = {
@@ -243,7 +243,7 @@ CMS_PLACEHOLDER_CONF = {
 #        'plugins': ['TextPlugin', 'PicturePlugin'],
 #        'text_only_plugins': ['LinkPlugin']
 #        'extra_context': {'width':640},
-        'name': gettext('Content'),
+        'name': _('Content'),
 #        'language_fallback': True,
 #        'child_classes': {
 #            'TextPlugin': ['PicturePlugin', 'LinkPlugin'],
@@ -291,8 +291,6 @@ PLACEHOLDER_FRONTEND_EDITING = True
 
 # jquery settings
 JQUERY_JS = 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'
-JQUERY_UI_JS = 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js'
-JQUERY_UI_CSS = 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css'
 
 # Use SortedManyToManyField
 PHOTOLOGUE_USE_SORTEDM2M = True
