@@ -3,4 +3,9 @@
   <a class="{% if child.selected %}selected{% endif %}{% if child.ancestor %}ancestor{% endif %}{% if child.sibling %}sibling{% endif %}{% if child.descendant %}descendant{% endif %}" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
     <span>{{ child.get_menu_title }}</span>
   </a>
+  {% if child.children %}
+  <span class="children">
+    {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
+  </span>
+  {% endif %}
 {% endfor %}
