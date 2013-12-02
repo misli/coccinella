@@ -25,9 +25,11 @@
             {% block header %}{% endblock %}
         </div>
         <div id="body">
+            <a name="top">
             {% block body %}{% endblock %}
         </div>
         <div id="footer">
+            <a id="link-top" href="#top">&#x2B06; nahoru &#x2B06;</a>
             {% block footer %}{% endblock %}
         </div>
         {% render_block "js" %}

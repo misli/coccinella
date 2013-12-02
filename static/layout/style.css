@@ -53,26 +53,29 @@ body {
     color: red;
 }
 
+a {
+    letter-spacing: .2em;
+    text-shadow:
+        white -.1em -.1em 2px,
+        white -.1em  .1em 2px,
+        white  .1em -.1em 2px,
+        white  .1em  .1em 2px;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 #menu {
     width: 180px;
     float: left;
     font-size: 24px;
+    font-variant: small-caps;
 }
 
 #menu a {
     display: block;
     margin: .2em 0;
     padding: .2em 0;
-    letter-spacing: 5px;
-    text-shadow:
-        white -2px -2px 2px,
-        white -2px  2px 2px,
-        white  2px -2px 2px,
-        white  2px  2px 2px;
-    color: red;
-    font-variant: small-caps;
-    font-weight: bold;
-    text-decoration: none;
 }
 
 #menu .children {
@@ -86,12 +89,21 @@ body {
     float: right;
 }
 
+#footer {
+    clear: both;
+}
+
 .coccinella-image {
     padding: 20px 0 30px;
 }
 
 .inner {
     padding: 0 100px;
+}
+
+#link-top {
+    display: block;
+    text-align: center;
 }
 
 h1, h2, h3 {
@@ -107,7 +119,7 @@ h2 { font-size: 20px; line-height: 20px; }
 h3 { font-size: 16px; line-height: 26px; }
 
 p {
-  padding: .3em 0;
+    padding: .3em 0;
 }
 
 .clear {
@@ -115,7 +127,7 @@ p {
 }
 
 ul, ol {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 code {
