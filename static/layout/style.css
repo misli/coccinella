@@ -101,9 +101,10 @@ body {
     padding: 0 100px;
 }
 
-#link-top {
+#link-top, #contact {
     display: block;
     text-align: center;
+    padding-top: 1em;
 }
 
 h1, h2, h3 {
