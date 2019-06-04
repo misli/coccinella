@@ -1,0 +1,3 @@
+#!/bin/bash
+
+letsencrypt certonly --webroot -w /srv/letsencrypt/htdocs -d coccinella.cz -d www.coccinella.cz

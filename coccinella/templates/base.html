@@ -1,4 +1,4 @@
-{% load cms_tags sekizai_tags misli_tags %}
+{% load cms_tags sekizai_tags staticfiles %}
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -14,8 +14,8 @@
         <meta name="author" content="Jakub Dorňák, Misli.cz" />
         <meta name="rating" content="general" />
         <meta name="robots" content="index" />
-        <link type="image/ico" href="{% static_url "layout/coccinella.ico" %}" />
-        <link type="text/css"  href="{% static_url "layout/style.css" %}" rel="stylesheet" />
+        <link type="image/ico" href="{% static "layout/coccinella.ico" %}" />
+        <link type="text/css"  href="{% static "layout/style.css" %}" rel="stylesheet" />
         {% render_block "css" %}
         {% block extrahead %}{% endblock %}
     </head>

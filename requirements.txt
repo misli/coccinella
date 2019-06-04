@@ -1,0 +1,2 @@
+cmsplugin-photologue
+django-photologue

@@ -1,0 +1,41 @@
+version: '3.4'
+services:
+
+  coccinella:
+    image: misli/coccinella
+    build: .
+    depends_on:
+      - memcached
+      - mysql
+    environment:
+      SECRET_KEY: secretkey
+      DATABASE_ENGINE: django.db.backends.mysql
+      DATABASE_HOST: ''
+      DATABASE_NAME: coccinella
+      DATABASE_PASSWORD: dbpassword
+      DATABASE_USER: coccinella
+      MEMCACHED_LOCATION: memcached:11211
+    ports:
+      - 127.0.0.1:9094:80
+    volumes:
+      - ./.ipython:/root/.ipython
+      - ./data:/app/data
+      - ./media:/app/htdocs/media
+      - mysql:/var/run/mysqld
+
+  memcached:
+    image: memcached
+
+  mysql:
+    image: mariadb
+    environment:
+      MYSQL_DATABASE: coccinella
+      MYSQL_PASSWORD: dbpassword
+      MYSQL_ROOT_PASSWORD: rootdbpassword
+      MYSQL_USER: coccinella
+    volumes:
+      - mysql:/var/run/mysqld
+      - ./mysql:/var/lib/mysql
+
+volumes:
+  mysql:

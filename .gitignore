@@ -1,2 +1,9 @@
 *.pyc
 *.pyo
+*.egg-info
+*.swp
+*~
+/data
+/docker-compose.override.yml
+/media
+/mysql*
